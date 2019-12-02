@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Threading.Tasks;
 
-public class Class1
+namespace AFK.Models
 {
-	public Class1()
+    public class Asignatura
     {
+        [Key]
+        public int IDAsignatura { get; set; }
+        public string NombreAsignatura { get; set; }
+
     }
 }
