@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AFK.Migrations
 {
     [DbContext(typeof(AFKContext))]
-    [Migration("20191203004754_AsignaturaMigracion")]
-    partial class AsignaturaMigracion
+    [Migration("20191203011210_Migracion")]
+    partial class Migracion
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
