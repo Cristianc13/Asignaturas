@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using AFK.Data;
 
 namespace AFK
 {
@@ -32,6 +34,9 @@ namespace AFK
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddDbContext<AFKContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("AFKContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
