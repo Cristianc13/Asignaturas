@@ -14,6 +14,10 @@ namespace AFK.Data
         {
         }
 
+ Albertb11/TercerAporte
         public DbSet<AFK.Models.Asignatura> Asignatura { get; set; }
+
+        public DbSet<AFK.Models.Estudiante> Estudiante { get; set; }
+master
     }
 }
